@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
-const port = 5000
+const port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => res.send('Hello, Deivson'))
+app.get('/', (req, res) => res.send('Integração Heroku / GIT'))
 
-app.listen(process.env.PORT, () => console.log(`Example app listening on port port!`))
+app.listen(port, () => console.log(`Example app listening on port port!`))
